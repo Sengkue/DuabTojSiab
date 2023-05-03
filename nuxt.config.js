@@ -14,11 +14,17 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@300;400&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['./assets/css/global.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -35,9 +41,16 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
-
+  ssr: true,
+  target: 'server',
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios',],
+  modules: [
+    '@nuxtjs/axios', // Simple usage
+    'cookie-universal-nuxt',
+
+    // With options
+    ['cookie-universal-nuxt', { alias: 'cookiz' }],
+  ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -61,6 +74,6 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   server: {
-    host: '0.0.0.0'
-  }
+    host: '0.0.0.0',
+  },
 }

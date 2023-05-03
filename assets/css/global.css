@@ -1,0 +1,29 @@
+.v-data-table .v-data-table-header tr th {
+  font-size: 15px !important;
+}
+
+*{
+  font-family: "Noto Serif Lao", serif;
+}
+.box{
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  }
+.box2 {
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+#shadow {
+  margin-top: -4px;
+  margin-right: -8px;
+  margin-bottom: 4px;
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+  inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+  /* mt-n1 mr-n2 mb-1 */
+
+}
+#shaow1 {
+
+  box-shadow:  inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+

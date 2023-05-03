@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <div class="text-subtitle-1 my-10">Duab Hmoob Toj Siab</div>
     <v-row>
       <v-col
@@ -35,9 +35,10 @@
       </v-col>
       <v-col cols="12">
         <div class="text-center">
+          <!-- :length="getDuabtojsiab.pages[4]" -->
           <v-pagination
             v-model="page"
-            :length="getDuabtojsiab.pages[4]"
+            
             :total-visible="7"
             @input="nextPage"
           ></v-pagination>
@@ -45,7 +46,7 @@
         </div>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
